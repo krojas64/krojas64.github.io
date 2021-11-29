@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+        <h1>Separation of Concerns</h1>
+        <a href="index.html">Return to Main Page</a>
+
+        <div>
+		The main idea of separation of concerns is making sure that certain <br>
+		parts of code don't serve multiple functions. Code that is meant to <br>
+		calculate or determine different values should stay together, and not <br>
+		spread around wherever it may be convenient. For example, in this <a href=https://github.com/krojas64/calc2/tree/statictest>GitHub repo</a> we can see that the <br>
+		caluclations and tests are within their respective directories. Looking <br>
+		into each directory, we can see that each part is separated based on what <br>
+		purpose they serve. In calc, we have an operations directory, where the <br>
+		calculation base class and other operations are kept. They all serve a <br>
+		similar purpose, which is why they are kept in this order. <br> <br>
+		Meanwhile the tests are also separated based on the different operation they test, <br>
+		but again, they are kept in a similar location. <br>
+		If we had tests running within the operation files, this would violate the <br>
+		single responsibility principle which dictates that parts of code should <br>
+		mainly serve a single purpose. <br>
+	</div>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+</body>
+

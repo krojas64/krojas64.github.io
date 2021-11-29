@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+        <h1>Object Oriented Programming</h1>
+        <a href="index.html">Return to Main Page</a>
+	
+	<div>
+		There are a number of principles that should be known when programming <br>
+		in any language. You might have already implemented it in a project <br>
+		but not actually know what or how it they really work. Here we'll <br>
+		cover four principles that are already in the Calculator code. <br>
+		<h2>Encapsulation</h2>
+		In the following file on <a href=https://github.com/krojas64/calc2/blob/statictest/calc/operations/calculation.py>GitHub</a> we have a class named Calculation. <br>
+		In the default constructor, we have a variable called <code>self.values</code> <br>
+		which is a private variable. This means that only the Calculation class <br>
+		is able to access it, and any classes that try to access the variable will be <br>
+		met with an error. The following image is another files in the same folder as <br>
+		the Calculation file, called Addition. <br><br>
+		<img src=https://cdn.discordapp.com/attachments/836049770254172201/914648192363135076/unknown.png>
+		<br><br>
+		We can see that the class uses the Calcualtion class in the line <code> class Addition(Calculation): </code> <br>
+		The Calculation class utilizes encapsulation by making sure that the Addition class <br>
+		can't directly access <code>self.values</code><br>
+		<h2>Inheritance</h2>
+		Using the previous image as an example, we know that the Addition class uses <br>
+		the calculation class, therefore Addition is a subclass of Calculation. <br>
+		Looking at the Calcualtion class, the line <code>def __init__(self, values: tuple):</code><br>
+		has an instance variable called <code>value</code>. Due to the property of inheritance, <br>
+		Addition is able to use values, since it is a subclass of Calculation. This is known <br>
+		as single inheritance, where a class inherits values or methods from a single class.<br>
+		<h2>Polymorphism</h2>
+		Polymorphism is the idea that something, like a method, can change form in a given context. <br>
+		If we look at <a href=https://github.com/krojas64/calc2/blob/statictest/calc/calculator.py>Calculator.py</a>, we can see that for each method that adds <br>
+		to the calculator history, they use the same line <code>Calculator.history.append()</code>, where <br>
+		the value in the parentheses changes based on what method it is in. <br>
+		The append method uses different object classes, but works identically in each instance. <br>
+		This is one of many examples of polymorphism, where it will output something different <br>
+		based on the context, and in this case, it is the type of object being passed in. <br>
+		<h2>Abstraction</h2>
+		When creating a class, it doesn't have to be fully complete in order to be used. <br>
+		Classes that are left partially complete are known as Abstract classes, and serve <br>
+		a good purpose. In our calculator project, we have Calculation class (see above GitHub link) <br>
+		that is essentially an abstract class. All of the operations, addition, subtraction, <br>
+		multiplication, and division are subclasses of it. They each have a <code>get_result</code> function <br>
+		which changes based on what operation is being used. If calculation had the same function, <br>
+		the subclasses would overwrite the parent function. This is how abstraction can help <br>
+		facilitate the creation of multiple classes that depend on a base class.
+	</div>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+</body>
